@@ -19,8 +19,8 @@ $bg :rgb(16, 16, 16);
         width: 100%;
         height: 100%;
         position: absolute;
-        top:0%;
-        left:0%;
+        top: 0%;
+        left: 0%;
         background-color: $bg;
         opacity: 0.4;
     }
@@ -36,7 +36,7 @@ $bg :rgb(16, 16, 16);
     p {
         font-size: 1.2rem;
         letter-spacing: 2px;
-        word-spacing:3px;
+        word-spacing: 3px;
         font-weight: 100;
 
     }
@@ -60,23 +60,25 @@ $bg :rgb(16, 16, 16);
             justify-content: center;
             transition: all 0.5s;
 
-            &:hover{
+            &:hover {
                 opacity: 0.7;
 
             }
 
-            &:nth-child(odd){
+            &:nth-child(odd) {
                 background-color: white;
                 color: black;
 
 
             }
-            &:nth-child(even){
-                background-color: rgb(76,76,76);
+
+            &:nth-child(even) {
+                background-color: rgb(76, 76, 76);
                 color: rgb(255, 255, 255);
-                
+
             }
-            svg{
+
+            svg {
                 font-size: 1.7rem;
                 margin: 0 10px;
             }
