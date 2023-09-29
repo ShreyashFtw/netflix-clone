@@ -4,9 +4,8 @@ import React, { useEffect, useState } from "react";
 import "./Home.scss";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import {BiPlay} from "react-icons/bi"
-import {AiOutlinePlus} from "react-icons/ai"
-
+import { BiPlay } from "react-icons/bi";
+import { AiOutlinePlus } from "react-icons/ai";
 
 const apiKey = "604af2c0485ace7676a04c0fb538e9b7";
 const url = "https://api.themoviedb.org/3";
@@ -104,8 +103,12 @@ const Home = () => {
         {popularMovies[0] && <p>{popularMovies[0].overview}</p>}
 
         <div>
-        <button><BiPlay /> Play  </button>
-        <button>My List <AiOutlinePlus /> </button>
+          <button>
+            <BiPlay /> Play{" "}
+          </button>
+          <button>
+            My List <AiOutlinePlus />{" "}
+          </button>
         </div>
       </div>
 
