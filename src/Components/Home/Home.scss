@@ -2,7 +2,7 @@ $bg :rgb(16, 16, 16);
 
 .banner {
     width: 100%;
-    height: 600px;
+    height: 1350px;
     background-color: $bg;
     background-size: cover;
     background-repeat: no-repeat;
@@ -11,8 +11,12 @@ $bg :rgb(16, 16, 16);
     flex-direction: column;
     justify-content: center;
     justify-content: space-evenly;
-    padding: 3rem;
+    padding: 3.5rem;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    background-position: 100;
+
 
     &::after {
         content: "";
@@ -27,17 +31,29 @@ $bg :rgb(16, 16, 16);
 
     h1,
     p {
-        color: white;
-        font-size: 3rem;
-        width: 40%;
+        font-size: 6rem;
+        width: 55%;
         z-index: 10;
+        color: #fff;
+        cursor: default;
+        line-height: 1.2;
+        font-family: Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+        user-select: none;
     }
 
     p {
-        font-size: 1.2rem;
-        letter-spacing: 2px;
-        word-spacing: 3px;
-        font-weight: 100;
+        font-size: 1.2vw;
+        font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+        line-height: normal;
+        letter-spacing: 1px;
+        word-spacing: 4px;
+        user-select: none;
+        font-weight: 400;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .45);
+        letter-spacing: 1;
+
+
 
     }
 
@@ -86,8 +102,44 @@ $bg :rgb(16, 16, 16);
         }
     }
 
+    /* Media query for 6.67-inch screens (approximately 320x480 pixels) */
+    @media (max-width: 480px) {
 
+        h1,
+        p {
+            font-size: 3rem;
+            width: 110%;
+            line-height: 1.2;
+        }
+
+        p {
+            font-family: Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+            font-size: 1rem;
+        }
+
+        .banner {
+            padding: 1rem;
+            width: 100%;
+            background-size: cover;
+
+        }
+
+        .banner>div {
+            flex-direction: column;
+            /* Stack elements vertically */
+        }
+
+        .banner>div button {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+    }
 }
+
+
 
 .row {
     padding: 1rem;
@@ -102,16 +154,21 @@ $bg :rgb(16, 16, 16);
         display: flex;
         overflow-x: auto; //scrollbar
     }
+
 }
 
 .card {
-    width: 200px;
+    width: 170px;
     margin: 0.5rem;
     cursor: pointer;
     transition: transform 0.5s;
 
     &:hover {
         transform: translateY(-10px);
+    }
+
+    @media (max-width: 480px) {
+        width: 140px;
     }
 }
 
@@ -121,13 +178,22 @@ $bg :rgb(16, 16, 16);
     height: 100px;
     background-color: $bg;
 
+    @media (max-width: 480px) {
+        height: auto;
+
+        >a {
+            min-width: 10px;
+            margin: 0.5rem;
+        }
+    }
+
     >a {
         color: black;
         background-color: white;
         padding: 1rem 0;
         margin: 1rem;
         text-align: center;
-        border-radius: 5px;
+        border-radius: 15px;
         transition: all 0.5s;
         min-width: 10rem;
         display: flex;
@@ -136,7 +202,7 @@ $bg :rgb(16, 16, 16);
 
 
         &:hover {
-            background-color: rgb(124, 151, 149);
+            background-color: rgb(151, 133, 124);
         }
 
     }
