@@ -23,12 +23,19 @@ $bg :rgb(16, 16, 16);
 
 .header {
     height: 100px;
+    width: 100%;
     background-color: $bg;
     display: flex;
     align-items: center;
     padding: 2rem;
     box-sizing: border-box;
     justify-content: space-between;
+    cursor: default;
+    user-select: none;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    position: relative;
+
+
 
 
     >img {
@@ -59,5 +66,40 @@ $bg :rgb(16, 16, 16);
 
     }
 
+
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        width: 100%;
+
+        >img {
+            height: 20px;
+        }
+
+        >div {
+            width: 50%;
+            /* Adjust the width for the links container */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* Center links vertically */
+
+            >a {
+                margin: 0.2rem;
+                /* Adjust the margin for spacing between links */
+                font-size: 0.8rem;
+            }
+        }
+
+        >svg {
+            height: 1.8rem;
+        }
+    }
 
 }
