@@ -92,14 +92,14 @@ const Home = () => {
       <div
         className="banner"
         style={{
-          backgroundImage: popularMovies[2]
-            ? `url(${imgUrl}/${popularMovies[2].poster_path})`
+          backgroundImage: popularMovies[5]
+            ? `url(${imgUrl}/${popularMovies[5].poster_path})`
             : "rgb(16, 16, 16)",
         }}
       >
-        {popularMovies[2] && <h1>{popularMovies[2].original_title}</h1>}
+        {popularMovies[5] && <h1>{popularMovies[5].original_title}</h1>}
 
-        {popularMovies[2] && <p>{popularMovies[2].overview}</p>}
+        {popularMovies[5] && <p>{popularMovies[5].overview}</p>}
 
         <div>
           <button>
