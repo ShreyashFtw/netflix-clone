@@ -50,7 +50,7 @@ const Home = () => {
     const fetchUpcoming = async () => {
       const {
         data: { results },
-      } = await axios.get(`${url}/movie/${upcoming}?api_key=${apiKey}&page=11`);
+      } = await axios.get(`${url}/movie/${upcoming}?api_key=${apiKey}&page=2`);
       setUpcomingMovies(results);
     };
     const fetchNowPlaying = async () => {
@@ -62,7 +62,7 @@ const Home = () => {
     const fetchPopular = async () => {
       const {
         data: { results },
-      } = await axios.get(`${url}/movie/${popular}?api_key=${apiKey}&page=9`);
+      } = await axios.get(`${url}/movie/${popular}?api_key=${apiKey}&page=8`);
       setPopularMovies(results);
     };
     const fetchTopRated = async () => {
@@ -92,14 +92,14 @@ const Home = () => {
       <div
         className="banner"
         style={{
-          backgroundImage: popularMovies[5]
-            ? `url(${imgUrl}/${popularMovies[5].poster_path})`
+          backgroundImage: popularMovies[8]
+            ? `url(${imgUrl}/${popularMovies[8].poster_path})`
             : "rgb(16, 16, 16)",
         }}
       >
-        {popularMovies[5] && <h1>{popularMovies[5].original_title}</h1>}
+        {popularMovies[8] && <h1>{popularMovies[8].original_title}</h1>}
 
-        {popularMovies[5] && <p>{popularMovies[5].overview}</p>}
+        {popularMovies[8] && <p>{popularMovies[8].overview}</p>}
 
         <div>
           <button>
